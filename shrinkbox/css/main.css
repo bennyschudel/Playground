@@ -1,0 +1,172 @@
+html {
+  height: 100%;
+}
+body {
+  background: #ffffff url(../img/wood_pattern.png) top center repeat;
+  height: 100%;
+  margin: 0;
+}
+.table {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.box {
+  display: inline-block;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-clip: padding-box;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 0 5px 0 rgba(0, 0, 0, 0.4), inset 0 0 30px 5px rgba(0, 0, 0, 0.6);
+}
+.box .container {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border-radius: 9px;
+  background-clip: padding-box;
+  width: 600px;
+  height: 400px;
+}
+.box .action {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  margin: -13px -13px 0 0;
+  cursor: pointer;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 50%;
+  background-clip: padding-box;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+.box .action .spike:before {
+  content: "";
+  background-color: black;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.box .action .spike:after {
+  content: "";
+  background-color: black;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.box .action .spike:last-of-type:before {
+  top: auto;
+  bottom: 0;
+}
+.box .action .spike:last-of-type:after {
+  bottom: auto;
+  right: 0;
+}
+.box.collapsed {
+  border-radius: 0;
+  transition: border-radius 0.3s ease-out;
+}
+.box.collapsed .container {
+  height: 0 !important;
+  border-radius: 0;
+  transition: height 0.3s ease-out, border-radius 0.3s ease-out;
+}
+.box.collapsed .action {
+  right: 50%;
+  transform: rotate(720deg);
+  transition: right 0.2s ease-out, transform 0.2s ease-out;
+  transition-delay: 0.3s;
+}
+.box.expanded {
+  border-radius: 10px;
+  transition: border-radius 0.3s ease-out;
+}
+.box.expanded .container {
+  border-radius: 9px;
+  transition: height 0.3s ease-out, border-radius 0.3s ease-out;
+  transition-delay: 0.2s;
+}
+.box.expanded .action {
+  right: 0%;
+  box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.8), 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  transform: rotate(45deg);
+  transition: right 0.2s ease-out, transform 0.2s ease-out;
+}
+/* infobox styling */
+#infobox {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+}
+#infobox .container {
+  width: 200px;
+  height: 124px;
+  color: #ffffff;
+  background-color: rgba(92, 79, 66, 0.8);
+}
+#infobox .container .content {
+  padding: 20px;
+  font-family: 'Droid Serif', Georgia, 'Times New Roman', Times, serif;
+}
+#infobox .container .content p {
+  margin: 0 0 12px 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+#infobox .container .content a {
+  display: block;
+  text-decoration: none;
+}
+#infobox .container .content a:link,
+#infobox .container .content a:hover,
+#infobox .container .content a:active,
+#infobox .container .content a:visited {
+  color: #ffffff;
+}
+#infobox .container .content a:hover {
+  text-decoration: underline;
+}
+#infobox .container .content a:before {
+  display: inline-block;
+  content: "➪";
+  padding-right: 4px;
+}
+/* theming */
+#box {
+  border-color: #4b4038;
+}
+#box .action {
+  border-color: #4b4038;
+  background-color: #fff;
+}
+#box .action .spike:before {
+  background-color: #4b4038;
+}
+#box .action .spike:after {
+  background-color: #4b4038;
+}
+#infobox {
+  border-color: #ae9581;
+}
+#infobox .action {
+  border-color: #ae9581;
+  background-color: #f4e5d8;
+}
+#infobox .action .spike:before {
+  background-color: #ae9581;
+}
+#infobox .action .spike:after {
+  background-color: #ae9581;
+}
