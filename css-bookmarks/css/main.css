@@ -7,11 +7,11 @@
 	height: 60px;
 
 	position: relative;
+	top: -3px;
 	cursor: pointer;
 
 	transition: padding 0.2s ease-in;
 }
-
 .bookmark:before {
 	content: "";
 
@@ -23,7 +23,7 @@
 	left: 3px;
 
 	border-style: solid;
-	border-color: hsla(0,0%,0%,0.1);
+	border-color: hsla(0,0%,0%,0.05);
 	border-width: 6px 27px 27px 27px;
 	border-bottom-color: transparent;
 }
@@ -41,15 +41,19 @@
 	border-width: 0 30px 30px 30px;
 	border-bottom-color: transparent;
 }
-
 .bookmark:hover,
 .bookmark.active {
 	padding-bottom: 60px;
 }
+.bookmark:hover:before,
+.bookmark.active:before {
+	border-color: hsla(0,0%,0%,0.1);
+	border-bottom-color: transparent;
+}
 
 .bookmark.red {
 	color: hsl(15,80%,40%);
-	background-image: linear-gradient(-90deg, hsl(15,80%,55%), hsl(15,80%,50%));
+	background-image: linear-gradient(-90deg, hsl(15,80%,45%) 3px, hsl(15,80%,55%) 3px, hsl(15,80%,50%));
 }
 .bookmark.red:after {
 	border-color: hsl(15,80%,50%);
@@ -62,7 +66,7 @@
 
 .bookmark.yellow {
 	color: hsl(60,80%,40%);
-	background-image: linear-gradient(-90deg, hsl(60,80%,55%), hsl(60,80%,50%));
+	background-image: linear-gradient(-90deg, hsl(60,80%,40%) 3px, hsl(60,80%,55%) 3px, hsl(60,80%,50%));
 }
 .bookmark.yellow:after {
 	color: hsl(60,80%,50%);
@@ -74,7 +78,7 @@
 
 .bookmark.green {
 	color: hsl(100,80%,40%);
-	background-image: linear-gradient(-90deg, hsl(100,80%,55%), hsl(100,80%,50%));
+	background-image: linear-gradient(-90deg, hsl(100,80%,45%) 3px, hsl(100,80%,55%) 3px, hsl(100,80%,50%));
 }
 .bookmark.green:after {
 	border-color: hsl(100,80%,50%);
@@ -87,7 +91,7 @@
 
 .bookmark.blue {
 	color: hsl(180,80%,35%);
-	background-image: linear-gradient(-90deg, hsl(180,80%,50%), hsl(180,80%,45%));
+	background-image: linear-gradient(-90deg, hsl(180,80%,40%) 3px, hsl(180,80%,50%) 3px, hsl(180,80%,45%));
 }
 .bookmark.blue:after {
 	border-color: hsl(180,80%,45%);
@@ -100,7 +104,7 @@
 
 .bookmark.pink {
 	color: hsl(330,80%,45%);
-	background-image: linear-gradient(-90deg, hsl(330,80%,60%), hsl(330,80%,55%));
+	background-image: linear-gradient(-90deg, hsl(330,80%,50%) 3px, hsl(330,80%,60%) 3px, hsl(330,80%,55%));
 }
 .bookmark.pink:after {
 	border-color: hsl(330,80%,55%);
