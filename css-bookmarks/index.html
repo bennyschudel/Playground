@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="css/main.css">
 
+	<script src="js/lib/modernizr-2.0.6.min.js"></script>
 </head>
 
 <body>
@@ -28,6 +29,13 @@
 
 
 	<script src="js/lib/prefixfree-1.0.4.min.js"></script>
+
+	<script>
+		window._gaq = [['_setAccount','UA-XXXXXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+		Modernizr.load({
+			load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+		});
+	</script>
 
 </body>
 </html>
