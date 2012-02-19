@@ -1,0 +1,211 @@
+/**
+ * CSS Bookmarks
+ */
+
+.bookmark {
+	width: 60px;
+	height: 60px;
+
+	position: relative;
+	cursor: pointer;
+
+	transition: padding 0.2s ease-in;
+}
+
+.bookmark:before {
+	content: "";
+
+	width: 0;
+	height: 0;
+
+	position: absolute;
+	bottom: -33px;
+	left: 3px;
+
+	border-style: solid;
+	border-color: hsla(0,0%,0%,0.1);
+	border-width: 6px 27px 27px 27px;
+	border-bottom-color: transparent;
+}
+.bookmark:after {
+	content: "";
+
+	width: 0;
+	height: 0;
+
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+
+	border-style: solid;
+	border-width: 0 30px 30px 30px;
+	border-bottom-color: transparent;
+}
+
+.bookmark:hover,
+.bookmark.active {
+	padding-bottom: 60px;
+}
+
+.bookmark.red {
+	color: hsl(15,80%,40%);
+	background-image: linear-gradient(-90deg, hsl(15,80%,55%), hsl(15,80%,50%));
+}
+.bookmark.red:after {
+	border-color: hsl(15,80%,50%);
+	border-bottom-color: transparent;
+}
+.bookmark.red:hover,
+.bookmark.red.active {
+	color: hsl(15,80%,25%);
+}
+
+.bookmark.yellow {
+	color: hsl(60,80%,40%);
+	background-image: linear-gradient(-90deg, hsl(60,80%,55%), hsl(60,80%,50%));
+}
+.bookmark.yellow:after {
+	color: hsl(60,80%,50%);
+}
+.bookmark.yellow:hover,
+.bookmark.yellow.active {
+	color: hsl(60,80%,25%);
+}
+
+.bookmark.green {
+	color: hsl(100,80%,40%);
+	background-image: linear-gradient(-90deg, hsl(100,80%,55%), hsl(100,80%,50%));
+}
+.bookmark.green:after {
+	border-color: hsl(100,80%,50%);
+	border-bottom-color: transparent;
+}
+.bookmark.green:hover,
+.bookmark.green.active {
+	color: hsl(100,80%,25%);
+}
+
+.bookmark.blue {
+	color: hsl(180,80%,35%);
+	background-image: linear-gradient(-90deg, hsl(180,80%,50%), hsl(180,80%,45%));
+}
+.bookmark.blue:after {
+	border-color: hsl(180,80%,45%);
+	border-bottom-color: transparent;
+}
+.bookmark.blue:hover,
+.bookmark.blue.active {
+	color: hsl(180,80%,20%);
+}
+
+.bookmark.pink {
+	color: hsl(330,80%,45%);
+	background-image: linear-gradient(-90deg, hsl(330,80%,60%), hsl(330,80%,55%));
+}
+.bookmark.pink:after {
+	border-color: hsl(330,80%,55%);
+	border-bottom-color: transparent;
+}
+.bookmark.pink:hover,
+.bookmark.pink.active {
+	color: hsl(330,80%,25%);
+}
+
+
+html {
+}
+body {
+	margin: 0;
+	background: black url(http://subtlepatterns.com/patterns/wood_pattern.png) top center repeat;
+
+	font-family: Garamond, Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 2em;
+
+	color: hsl(30,50%,40%);
+
+	font-size: 3em;
+
+	text-shadow: -1px -1px 0 hsla(0,0%,0%,0.1),
+				 1px 1px 0 hsla(0,0%,100%,0.2);
+}
+h1 em {
+	font-size: 0.4em;
+	vertical-align: top;
+	top: 18px;
+	position: relative;
+}
+
+#book {
+	width: 60%;
+	height: 640px;
+
+	position: relative;
+	margin: 0 auto;
+
+	background: white url(http://subtlepatterns.com/patterns/large_leather.png) top center repeat;
+
+	border-radius: 10px 30px 30px 10px;
+
+	box-shadow: inset 0 0 10px 0 hsla(0,0%,0%,0.1),
+				0 0 20px 0 hsla(0,0%,0%,0.3);
+}
+
+.bookmark {
+	display: block;
+	float: right;
+	margin: 0 5px;
+
+	font-weight: bold;
+	font-size: 2.2em;
+	line-height: 60px;
+
+	text-shadow: -1px -1px 0 hsla(0,0%,0%,0.1),
+				 1px 1px 0 hsla(0,0%,100%,0.2);
+	text-align: center;
+}
+.bookmark:first-child {
+	margin-right: 8%;
+}
+
+p.note {
+	font-weight: bold;
+	padding-bottom:20px;
+
+	color: hsl(30,50%,40%);
+
+	text-shadow: -1px -1px 0 hsla(0,0%,0%,0.1),
+				 1px 1px 0 hsla(0,0%,100%,0.2);
+	text-align: center;
+}
+p.note a,
+p.note a:link,
+p.note a:active,
+p.note a:visited {
+	color: hsl(30,50%,40%);
+}
+p.note a:hover {
+	color: hsl(30,50%,20%);
+}
+p.note a:before {
+	display: inline-block;
+	content: "➪";
+	padding-right: 4px;
+}
+
+.fix {
+	zoom: 1;
+}
+.fix:before,
+.fix:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+.fix:after {
+	clear: both;
+}
