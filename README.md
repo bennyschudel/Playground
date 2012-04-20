@@ -1,3 +1,7 @@
 # playground.swissamigos.com
 
-## [A CSS3 ShrinkBox experiment](http://playground.swissamigos.com/shrinkbox/)
+## Demos
+
++ ### [Shrinkbox](http://playground.swissamigos.com/css-shrinkbox/)
++ ### [Bookmarks](http://playground.swissamigos.com/css-bookmarks/)
++ ### [Expandable Links](http://playground.swissamigos.com/css-expandable-links/)
